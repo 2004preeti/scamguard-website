@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Play, CheckCircle2, AlertCircle, Copy, Code, Terminal, Layers } from 'lucide-react';
 import axios from 'axios';
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = 'https://scamguard-hqs7.onrender.com/api';
 
 const API_LIST = [
   // 1. User Authentication APIs (3)

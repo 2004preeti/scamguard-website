@@ -3,7 +3,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import { Lock, Mail, ShieldAlert, ArrowLeft, KeyRound, Loader2, AlertCircle } from 'lucide-react';
 import axios from 'axios';
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = 'https://scamguard-hqs7.onrender.com/api';
 
 export default function AdminLogin() {
   const [email, setEmail] = useState('');

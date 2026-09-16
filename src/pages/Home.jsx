@@ -39,7 +39,7 @@ import DatabaseDiagramModal from '../components/DatabaseDiagramModal';
 import ReportModal from '../components/ReportModal';
 import VoiceScamModal from '../components/VoiceScamModal';
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = 'https://scamguard-hqs7.onrender.com/api';
 
 // --- 3D Background Components ---
 function ParticleGalaxy() {

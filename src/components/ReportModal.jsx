@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ShieldAlert, Send, X, CheckCircle2 } from 'lucide-react';
 import axios from 'axios';
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = 'https://scamguard-hqs7.onrender.com/api';
 
 export default function ReportModal({ onClose, defaultNumber = '' }) {
   const [number, setNumber] = useState(defaultNumber);

@@ -32,7 +32,7 @@ import {
 } from 'lucide-react';
 import { useNavigate, Link } from 'react-router-dom';
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = 'https://scamguard-hqs7.onrender.com/api';
 
 export default function AdminDashboard() {
   const [activeTab, setActiveTab] = useState('DASHBOARD'); // 'DASHBOARD' | 'REPORTS' | 'AI_TRAINING' | 'LOGS'

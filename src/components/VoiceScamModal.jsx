@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Mic, Radio, Volume2, AlertTriangle, CheckCircle2, Play, Square, X, Activity } from 'lucide-react';
 import axios from 'axios';
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = 'https://scamguard-hqs7.onrender.com/api';
 
 export default function VoiceScamModal({ onClose }) {
   const [analyzing, setAnalyzing] = useState(false);
