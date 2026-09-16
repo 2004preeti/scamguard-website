@@ -513,7 +513,15 @@ export default function Home({
             style={styles.inputField}
             placeholder={SCAN_MODES.find((m) => m.id === activeTab)?.placeholder}
             value={query}
-            onChange={(e) => setQuery(e.target.value)}
+            onChange={(e) => {
+              if (activeTab === 'CALL') {
+                const val = e.target.value.replace(/\D/g, '');
+                if (val.length <= 10) setQuery(val);
+              } else {
+                setQuery(e.target.value);
+              }
+            }}
+            maxLength={activeTab === 'CALL' ? 10 : undefined}
             onKeyPress={(e) => e.key === 'Enter' && handleScan()}
           />
           <label style={styles.iconBtn} title="Upload Screenshot / Job Letter for OCR Scan">

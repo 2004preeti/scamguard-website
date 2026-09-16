@@ -314,10 +314,14 @@ export default function MobileSimulator({ onClose }) {
                   placeholder="Enter phone number to check..."
                   value={searchNumber}
                   onChange={(e) => {
-                    setSearchNumber(e.target.value);
-                    if (e.target.value.length > 5) handleSearchPhone(e.target.value);
-                    else setCallSearchStatus(null);
+                    const val = e.target.value.replace(/\D/g, '');
+                    if (val.length <= 10) {
+                      setSearchNumber(val);
+                      if (val.length > 5) handleSearchPhone(val);
+                      else setCallSearchStatus(null);
+                    }
                   }}
+                  maxLength={10}
                   className="w-full h-11 pl-10 pr-4 bg-slate-900/90 border border-slate-700/60 rounded-xl text-xs text-white placeholder-slate-400 focus:outline-none focus:border-[#2D8CFF]"
                 />
                 <Search size={15} className="absolute left-3.5 top-3.5 text-slate-400" />

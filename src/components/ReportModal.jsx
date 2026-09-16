@@ -72,8 +72,12 @@ export default function ReportModal({ onClose, defaultNumber = '' }) {
                 type="text"
                 required
                 value={number}
-                onChange={(e) => setNumber(e.target.value)}
-                placeholder="+91 98765 43210"
+                onChange={(e) => {
+                  const val = e.target.value.replace(/\D/g, '');
+                  if (val.length <= 10) setNumber(val);
+                }}
+                placeholder="Enter 10-digit number"
+                maxLength={10}
                 className="w-full h-11 px-3.5 bg-slate-950 border border-slate-700 rounded-xl text-xs text-white focus:outline-none focus:border-red-500"
               />
             </div>
